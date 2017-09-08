@@ -1,18 +1,15 @@
-import {Date} from './../js/date.js';
+import {GalacticDate} from './../js/date.js';
 
 
-describe('Date', function(){
+describe('GalacticDate', function(){
   let date;
   beforeEach(function(){
-    date = new Date("05/29/1978");
-  });
-  it('should test to instantiate a date object', function(){
-    expect(date.dateEntered).toEqual("05/29/1978")
+    date = new GalacticDate();
   });
 
-  it('should return the date entered in seconds', function() {
-      expect(date.dateInSeconds).toEqual(265273200);
-    });
+  it('should test if an age is returned in number of seconds', function(){
+    expect(date.checkAgeInSeconds(1)).toEqual(31536000)
+  });
 
 
 });

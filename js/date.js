@@ -1,16 +1,19 @@
-export class Date {
-  constructor(dateEntered) {
-    this.dateEntered = dateEntered;
+export class GalacticDate {
+  constructor(age) {
+    this.age = age;
   }
 
-  checkDate() {
-    const minute = 1000 * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
-
-    date = new Date("1/1/2001");
-    let time = date.getTime();
-
-    // (Math.round(time / day) + " days from 1/1/1970 to 1/1/2001");
+  checkAgeInSeconds(age) {
+    // const yearsToSeconds = 31536000;
+    // let ageInSeconds = age * yearsToSeconds;
+    // return ageInSeconds;
+    // const minute = 1000 * 60;
+    // const hour = minute * 60;
+    // const day = hour * 24;
+    //
+    // date = new GalacticDate(dateEntered, dateCurrent);
+    // let time = date.getTime();
+    //
+    // return time;
   }
 }
