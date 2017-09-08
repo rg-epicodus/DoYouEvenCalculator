@@ -58,7 +58,7 @@ describe('GalacticDate', function(){
 
   it('should return age of user on Neptune', function(){
   let dateEntered = date.findAge("1978/05/29")
-  expect(date.ageIfOnNeptune(dateEntered)).toEqual(5932.44)
+  expect(date.ageIfOnNeptune(dateEntered)).toEqual(6426.81)
   });
 
 
