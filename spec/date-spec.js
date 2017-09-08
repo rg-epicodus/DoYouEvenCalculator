@@ -61,5 +61,14 @@ describe('GalacticDate', function(){
   expect(date.ageIfOnNeptune(dateEntered)).toEqual(6426.81)
   });
 
+  it('should calculate the difference in average age and earth age', function(){
+  let dateEntered = date.findAge("1978/05/29")
+  let earthAge = date.ageIfOnEarth(dateEntered)
+  let country = "Canada"
+  let gender = "female"
+  let expirationDate = date.demographicInfo(country, gender);
+  expect(expirationDate - earthAge).toEqual(45.13)
+})
+
 
 });
