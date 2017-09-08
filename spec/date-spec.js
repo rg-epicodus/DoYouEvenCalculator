@@ -46,6 +46,11 @@ describe('GalacticDate', function(){
   expect(date.ageIfOnJupiter(dateEntered)).toEqual(462.54)
   });
 
+  it('should return age of user on Saturn', function(){
+  let dateEntered = date.findAge("1978/05/29")
+  expect(date.ageIfOnSaturn(dateEntered)).toEqual(1150.50)
+  });
+
 
 
 });
