@@ -57,6 +57,12 @@ export class GalacticDate {
     return ageSaturn
   }
 
+  ageIfOnUranus(age){
+    const uranus = 84.2;
+    let ageUranus = Math.round((age * uranus)*100)/100;
+    return ageUranus
+  }
+
 
 
 
