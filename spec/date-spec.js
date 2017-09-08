@@ -13,7 +13,12 @@ describe('GalacticDate', function(){
 
   it('should return age of user', function(){
     let dateEntered = "1978/05/29"
-    expect(date.findDate(dateEntered)).toEqual(38)
-  })
+    expect(date.findDate(dateEntered)).toEqual(39)
+  });
+
+  it('should return the difference of a users age and current date in seconds', function(){
+  let dateEntered = date.findDate("1978/05/29")
+  expect(date.checkAgeInSeconds(dateEntered)).toEqual(122990400)
+  });
 
 });
