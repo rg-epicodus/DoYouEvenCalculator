@@ -1,4 +1,4 @@
-var Constructor = require('./../js/calculator.js').constructorModule;
+import { Calculator } from './../js/calculator.js';
 
 $(document).ready(function(){
     event.preventDefault();

@@ -1,6 +1,9 @@
-function Constructor() {
+export class Calculator {
+  constructor(age) {
+    // this.age = age;
+  }
 
-}
+  checkAge() {
 
-
-exports.constructorModule = Constructor;
+  }
+};
