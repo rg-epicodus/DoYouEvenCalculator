@@ -21,7 +21,11 @@ export class GalacticDate {
     return age;
   }
 
-
+  ageIfOnEarth(age){
+    const earth = 1;
+    let ageEarth = Math.round((age * earth)*100)/100;
+    return ageEarth
+  }
 
 
 
