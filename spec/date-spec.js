@@ -67,7 +67,7 @@ describe('GalacticDate', function(){
   let country = "Canada"
   let gender = "female"
   let expirationDate = date.demographicInfo(country, gender);
-  expect(expirationDate - earthAge).toEqual(45.13)
+  expect(expirationDate - earthAge).toEqual(45);
 })
 
 
