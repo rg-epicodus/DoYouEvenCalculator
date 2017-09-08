@@ -41,6 +41,11 @@ describe('GalacticDate', function(){
   expect(date.ageIfOnMars(dateEntered)).toEqual(73.32)
   });
 
+  it('should return age of user on Jupiter', function(){
+  let dateEntered = date.findAge("1978/05/29")
+  expect(date.ageIfOnJupiter(dateEntered)).toEqual(462.54)
+  });
+
 
 
 });
