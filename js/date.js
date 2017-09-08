@@ -1,6 +1,7 @@
 export class GalacticDate {
-  constructor(age) {
+  constructor(age, date) {
     this.age = age;
+    this.date = date;
   }
 
   checkAgeInSeconds(age) {
