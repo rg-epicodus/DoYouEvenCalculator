@@ -60,6 +60,7 @@ describe('GalacticDate', function(){
   let gender = "female"
   let expirationDate = date.demographicInfo(country, gender);
   expect(expirationDate - earthAge).toEqual(45);
+  // expect(expirationDate - earthAge).toFixed(2).toEqual(45);  //this breaks all me testing functions for some reason
 })
 
 

@@ -1,3 +1,19 @@
-input {
-    width: 100px;
+body {
+  background-image: url(/img/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+input[type="number"] {
+    width:200px
+}
+
+#location, #gender {
+    width: 200px;
+}
+
+.well {
+  margin-top: 2%;
+  background-color: rgba(165, 165, 165, 0.8);
 }
