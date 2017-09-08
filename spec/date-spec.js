@@ -31,5 +31,11 @@ describe('GalacticDate', function(){
   expect(date.ageIfOnMercury(dateEntered)).toEqual(9.36)
   });
 
+  it('should return age of user on Venus', function(){
+  let dateEntered = date.findAge("1978/05/29")
+  expect(date.ageIfOnVenus(dateEntered)).toEqual(24.18)
+  });
+
+
 
 });
