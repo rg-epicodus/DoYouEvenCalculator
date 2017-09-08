@@ -10,7 +10,7 @@ export class GalacticDate {
     return ageInSeconds;
   }
 
-  findDate(date){
+  findAge(date){
     let today = new Date();
     let dateEntered = new Date(date);
     let age = today.getFullYear() - dateEntered.getFullYear();
@@ -27,6 +27,11 @@ export class GalacticDate {
     return ageEarth
   }
 
+  ageIfOnMercury(age){
+    const mercury = 0.24;
+    let ageMercury = Math.round((age * mercury)*100)/100;
+    return ageMercury
+  }
 
 
 
