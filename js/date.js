@@ -8,13 +8,31 @@ export class GalacticDate {
     const yearsToSeconds = 31536000;
     let ageInSeconds = age * yearsToSeconds;
     return ageInSeconds;
-    // const minute = 1000 * 60;
-    // const hour = minute * 60;
-    // const day = hour * 24;
-    //
-    // date = new GalacticDate(dateEntered, dateCurrent);
-    // let time = date.getTime();
-    //
-    // return time;
   }
+
+  findDate(date){
+    let today = new Date();
+    let dateEntered = new Date(date);
+    let age = today.getFullYear() - dateEntered.getFullYear();
+    let m = today.getMonth() - dateEntered.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < dateEntered.getDate())) {
+        age--;
+    }
+    return age;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -11,9 +11,9 @@ describe('GalacticDate', function(){
     expect(date.checkAgeInSeconds(1)).toEqual(31536000)
   });
 
-  it('should find birthday of user', function(){
+  it('should return age of user', function(){
     let dateEntered = "1978/05/29"
-    expect(date.findDate(dateEntered)).toEqual(23)
+    expect(date.findDate(dateEntered)).toEqual(39)
   })
 
 });
