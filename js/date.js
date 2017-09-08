@@ -4,9 +4,9 @@ export class GalacticDate {
   }
 
   checkAgeInSeconds(age) {
-    // const yearsToSeconds = 31536000;
-    // let ageInSeconds = age * yearsToSeconds;
-    // return ageInSeconds;
+    const yearsToSeconds = 31536000;
+    let ageInSeconds = age * yearsToSeconds;
+    return ageInSeconds;
     // const minute = 1000 * 60;
     // const hour = minute * 60;
     // const day = hour * 24;
