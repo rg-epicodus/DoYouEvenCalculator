@@ -45,6 +45,11 @@ export class GalacticDate {
     return ageMars
   }
 
+  ageIfOnJupiter(age){
+    const jupiter = 11.86;
+    let ageJupiter = Math.round((age * jupiter)*100)/100;
+    return ageJupiter
+  }
 
 
 
