@@ -51,6 +51,11 @@ export class GalacticDate {
     return ageJupiter
   }
 
+  ageIfOnSaturn(age){
+    const saturn = 29.5;
+    let ageSaturn = Math.round((age * saturn)*100)/100;
+    return ageSaturn
+  }
 
 
 
