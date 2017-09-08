@@ -33,6 +33,11 @@ export class GalacticDate {
     return ageMercury
   }
 
+  ageIfOnVenus(age){
+    const venus = 0.62;
+    let ageVenus = Math.round((age * venus)*100)/100;
+    return ageVenus
+  }
 
 
 
