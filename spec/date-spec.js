@@ -21,4 +21,9 @@ describe('GalacticDate', function(){
   expect(date.checkAgeInSeconds(dateEntered)).toEqual(1229904000)
   });
 
+  it('should return age of user on Earth', function(){
+  let dateEntered = date.findDate("1978/05/29")
+  expect(date.ageIfOnEarth(dateEntered)).toEqual(39)
+});
+
 });
