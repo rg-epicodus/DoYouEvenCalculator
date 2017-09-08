@@ -24,6 +24,12 @@ describe('GalacticDate', function(){
   it('should return age of user on Earth', function(){
   let dateEntered = date.findDate("1978/05/29")
   expect(date.ageIfOnEarth(dateEntered)).toEqual(39)
-});
+  });
+
+  it('should return age of user on Mercury', function(){
+  let dateEntered = date.findDate("1978/05/29")
+  expect(date.ageIfOnMercury(dateEntered)).toEqual(9.36)
+  });
+
 
 });
