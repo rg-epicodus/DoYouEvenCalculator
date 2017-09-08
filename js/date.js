@@ -39,7 +39,11 @@ export class GalacticDate {
     return ageVenus
   }
 
-
+  ageIfOnMars(age){
+    const mars = 1.88;
+    let ageMars = Math.round((age * mars)*100)/100;
+    return ageMars
+  }
 
 
 
