@@ -13,7 +13,7 @@ describe('GalacticDate', function(){
 
   it('should return age of user', function(){
     let dateEntered = "1978/05/29"
-    expect(date.findDate(dateEntered)).toEqual(39)
+    expect(date.findDate(dateEntered)).toEqual(38)
   })
 
 });
