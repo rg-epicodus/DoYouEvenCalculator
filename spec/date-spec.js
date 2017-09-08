@@ -10,4 +10,9 @@ describe('Date', function(){
     expect(date.dateEntered).toEqual("05/29/1978")
   });
 
+  it('should return the date entered in seconds', function() {
+      expect(date.dateInSeconds).toEqual(265273200);
+    });
+
+
 });
