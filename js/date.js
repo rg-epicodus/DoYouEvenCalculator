@@ -5,9 +5,9 @@ export class GalacticDate {
   }
 
   checkAgeInSeconds(age) {
-    const yearsToSeconds = 31536000;
-    let ageInSeconds = age * yearsToSeconds;
-    return ageInSeconds;
+    const timeCount = 31536000;
+    let timeSeconds = age * timeCount;
+    return timeSeconds;
   }
 
   findAge(date){
