@@ -20,12 +20,12 @@ For instance, a solar year on Mercury lasts 88 days.
 | Behavior      | Example Input         | Example Output        |
 | ------------- | ------------- | ------------- |
 | Take a person’s age in years and convert it into seconds | 1 | 31536000 |
-| Take two dates and determine the difference, in seconds, between the two |  |  |
+| Take two dates and determine the difference, in seconds, between the two | 01/01/1970, 01/01/2000 | 946684800 |
 | Return the age of a human in Mercury years | 50 | 12 |
 | Return the age of a human in Venus years | 50 | 31 |
 | Return the age of a human in Mars years | 50 | 94 |
 | Return the age of a human in Jupiter years | 50 | 593 |
-| Determine how many years a user has left to live on each planet |  |  |
+| Determine how many years a user has left to live on each planet | 45, Canada, Male | 35 |
 
 
 
