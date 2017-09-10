@@ -74,9 +74,12 @@ describe('GalacticDate', function(){
   expect(expirationDate - earthAge).toEqual(45);
   });
 
-  it('should calculate if the user should have already expired', function() {
-  expect(date.checkIfExpired(dateEntered)).toEqual(false);
+  it('should return true if the users age is past the epiration date', function(){
+    let earthAge = date.findAge("1978/05/29")
+    let country = "Canada"
+    let gender = "female"
+    let expirationDate = date.demographicInfo(country, gender);
+    expect(date.checkIfExpired(earthAge)).toEqual(true);
   });
-
 
 });

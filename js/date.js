@@ -108,10 +108,17 @@ export class GalacticDate {
     } else if (gender === "male" && location == "Nigeria"){
       expirationDate = 53;
     } else {
-      expirationDate = 74;
+      expirationDate = 75;
     } return expirationDate;
   }
 
+  checkIfExpired(age, expirationDate) {
+    if(expirationDate - age > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
 
 
