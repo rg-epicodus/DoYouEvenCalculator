@@ -2,11 +2,18 @@ import {GalacticDate} from './../js/date.js';
 
 
 describe('GalacticDate', function(){
+  let moment = require('moment');
   let date;
+  let testDate;
+  let dateToTest;
+  let currentDateTest;
   let dateEntered;
   beforeEach(function(){
+    testDate = "1978-29-05";
     date = new GalacticDate();
     dateEntered = date.findAge("1978/05/29")
+    dateToTest = moment(testDate);
+    currentDateTest = moment();
   });
 
   it('should test if an age is returned in number of seconds', function(){
@@ -55,8 +62,9 @@ describe('GalacticDate', function(){
   });
 
   it('should calculate the difference between two dates in seconds', function() {
-  expect(date - dateEntered).toEqual(1)
-});
+    let test = dateToTest.diff(testDate, 'seconds');
+  expect(date.checkTimeBetween(testDate)).toEqual(test)
+  });
 
   it('should calculate the difference in life expectency age and earth age', function(){
   let earthAge = date.ageIfOnEarth(dateEntered)
@@ -65,7 +73,7 @@ describe('GalacticDate', function(){
   let expirationDate = date.demographicInfo(country, gender);
   expect(expirationDate - earthAge).toEqual(45);
   // expect(expirationDate - earthAge).toFixed(2).toEqual(45);  //this breaks all me testing functions for some reason
-})
+});
 
 
 });

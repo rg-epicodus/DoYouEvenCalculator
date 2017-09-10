@@ -1,7 +1,9 @@
+import { moment } from './../node_modules/moment/moment.js';
+
 export class GalacticDate {
-  constructor(age, date) {
+  constructor(age, dateEntered) {
     this.age = age;
-    this.date = date;
+    this.dateEntered = dateEntered;
   }
 
   checkAgeInSeconds(age) {
@@ -11,14 +13,23 @@ export class GalacticDate {
   }
 
   findAge(date){
-    let today = new Date();
+    let currentDate = new Date();
     let dateEntered = new Date(date);
-    let age = today.getFullYear() - dateEntered.getFullYear();
-    let m = today.getMonth() - dateEntered.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < dateEntered.getDate())) {
-        age--;
+    let yearsOld = currentDate.getFullYear() - dateEntered.getFullYear();
+    let checkMonth = currentDate.getMonth() - dateEntered.getMonth();
+    if (checkMonth < 0 || (checkMonth === 0 && currentDate.getDate() < dateEntered.getDate())) {
+        yearsOld--;
     }
-    return age;
+    return yearsOld;
+  }
+
+  checkTimeBetween(dateEntered) {
+    const moment = require('moment');
+    let date = moment(dateEntered);
+    let currentDate = moment();
+    let timeBetween = currentDate.diff(date, 'seconds');
+    return timeBetween;
+
   }
 
   ageIfOnEarth(age){
