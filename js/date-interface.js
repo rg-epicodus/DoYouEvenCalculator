@@ -6,6 +6,7 @@ $(document).ready(function() {
 
     let age = $('#ageEntered').val();
     let date = $('dateEntered').val();
+    let currentDate = new Date();
     let gender = $("#gender").val();
     let location = $("#location").val();
     let test = new GalacticDate(age, date);

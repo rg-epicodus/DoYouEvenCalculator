@@ -54,7 +54,11 @@ describe('GalacticDate', function(){
   expect(date.ageIfOnNeptune(dateEntered)).toEqual(6426.81)
   });
 
-  it('should calculate the difference in average age and earth age', function(){
+  it('should calculate the difference between two dates in seconds', function() {
+  expect(date - dateEntered).toEqual(1)
+});
+
+  it('should calculate the difference in life expectency age and earth age', function(){
   let earthAge = date.ageIfOnEarth(dateEntered)
   let country = "Canada"
   let gender = "female"
