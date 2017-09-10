@@ -62,7 +62,7 @@ describe('GalacticDate', function(){
   });
 
   it('should calculate the difference between two dates in seconds', function() {
-    let test = dateToTest.diff(testDate, 'seconds');
+  let test = dateToTest.diff(testDate, 'seconds');
   expect(date.checkTimeBetween(testDate)).toEqual(test)
   });
 
@@ -72,8 +72,11 @@ describe('GalacticDate', function(){
   let gender = "female"
   let expirationDate = date.demographicInfo(country, gender);
   expect(expirationDate - earthAge).toEqual(45);
-  // expect(expirationDate - earthAge).toFixed(2).toEqual(45);  //this breaks all me testing functions for some reason
-});
+  });
+
+  it('should calculate if the user should have already expired', function() {
+  expect(date.checkIfExpired(dateEntered)).toEqual(false);
+  });
 
 
 });
