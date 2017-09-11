@@ -5,10 +5,11 @@ $(document).ready(function() {
     event.preventDefault();
 
     let age = $('#ageEntered').val();
-    let date = $('dateEntered').val();
+    let date = $('#dateEntered').val();
     let currentDate = new Date();
     let gender = $("#gender").val();
     let location = $("#location").val();
+    // let isDead = checkIfExpired(age);
     let test = new GalacticDate(age, date);
     let ageEarth = test.ageIfOnEarth(age);
     let ageMercury = test.ageIfOnMercury(age);
@@ -18,24 +19,43 @@ $(document).ready(function() {
     let ageSaturn = test.ageIfOnSaturn(age);
     let ageNeptune = test.ageIfOnNeptune(age);
     let ageUranus = test.ageIfOnUranus(age);
+    let expirationDate = test.demographicInfo(location, gender);
+    let expireEarth = expirationDate - ageEarth;
+    let expireMercury = expirationDate - ageEarth;
+    let expireVenus = expirationDate - ageEarth;
+    let expireMars = expirationDate - ageEarth;
+    let expireJupiter = expirationDate - ageEarth;
+    let expireSaturn = expirationDate - ageEarth;
+    let expireNeptune = expirationDate - ageEarth;
+    let expireUranus = expirationDate - ageEarth;
 
-    $('#ageEarth').append("<li>" + ageEarth + "</li>");
-    $('#ageMercury').append("<li>" + ageMercury + "</li>");
-    $('#ageVenus').append("<li>" + ageVenus + "</li>");
-    $('#ageMars').append("<li>" + ageMars + "</li>");
-    $('#ageJupiter').append("<li>" + ageJupiter + "</li>");
-    $('#ageSaturn').append("<li>" + ageSaturn + "</li>");
-    $('#ageNeptune').append("<li>" + ageNeptune + "</li>");
-    $('#ageUranus').append("<li>" + ageUranus + "</li>");
+    console.log(test);
 
-    $('#expireEarth').append("<li>" + expireEarth + "</li>");
-    $('#expireMercury').append("<li>" + expireMercury + "</li>");
-    $('#expireVenus').append("<li>" + expireVenus + "</li>");
-    $('#expireMars').append("<li>" + expireMars + "</li>");
-    $('#expireJupiter').append("<li>" + expireJupiter + "</li>");
-    $('#expireSaturn').append("<li>" + expireSaturn + "</li>");
-    $('#expireNeptune').append("<li>" + expireNeptune + "</li>");
-    $('#expireUranus').append("<li>" + expireUranus + "</li>");
+    console.log(age);
+    console.log(date);
+    console.log(gender);
+    console.log(location);
+    console.log(expirationDate);
+
+    console.log(expireEarth);
+
+    $('#ageEarth').append("" + ageEarth);
+    $('#ageMercury').append("" + ageMercury);
+    $('#ageVenus').append("" + ageVenus);
+    $('#ageMars').append("" + ageMars);
+    $('#ageJupiter').append("" + ageJupiter);
+    $('#ageSaturn').append("" + ageSaturn);
+    $('#ageNeptune').append("" + ageNeptune);
+    $('#ageUranus').append("" + ageUranus);
+
+    $('#expireEarth').append("" + expireEarth);
+    $('#expireMercury').append("" + expireMercury);
+    $('#expireVenus').append("" + expireVenus);
+    $('#expireMars').append("" + expireMars);
+    $('#expireJupiter').append("" + expireJupiter);
+    $('#expireSaturn').append("" + expireSaturn);
+    $('#expireNeptune').append("" + expireNeptune);
+    $('#expireUranus').append("" + expireUranus);
 
   });
 });
